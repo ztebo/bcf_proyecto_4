@@ -6,7 +6,7 @@ Datos Estudiante:
 * Correo personal: mtesteban@outlook.com
 
 # Descripción
-Realizado de acuerdo con las instrucciones del repositorio: [APPM_2_M3_PROY4](https://github.com/UDDBootcamp/APPM_2_M3_PROY4)
+Realizado de acuerdo con las instrucciones del repositorio: [APPM_2_M4_PROY4](https://github.com/UDDBootcamp/APPM_2_M4_PROY4)
 
 # Notas de avance
 ## ...
