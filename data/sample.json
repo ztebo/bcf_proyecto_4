@@ -1,0 +1,94 @@
+{
+    "items": [
+        {
+            "name": "Refugio Secreto",
+            "description": "Oculto entre las ruinas, este refugio ofrece un respiro seguro para los mercenarios cansados. Equipado con suministros médicos y alimentos, es un oasis en el caos.",
+            "cell": "+56912345601",
+            "picture": "/images/refugio_secreto.jpg",
+            "location": "47.112, 28.125",
+            "link_web": "https://tarkovrefugio.com",
+            "curiosity": "Se rumorea que un médico retirado, que una vez sirvió en el ejército, reside aquí, brindando cuidados a quienes conozcan el secreto para encontrarlo."
+        },
+        {
+            "name": "Centro de Comando Abandonado",
+            "description": "Una vez un bullicioso núcleo de estrategia militar, ahora yace en silencio, salvo por el eco de botas furtivas. Mapas antiguos y equipos aún pueden encontrarse aquí.",
+            "cell": "+56912345602",
+            "picture": "/images/centro_comando.jpg",
+            "location": "47.113, 28.126",
+            "link_web": "https://tarkovcomando.com",
+            "curiosity": "Dicen que los planos de un túnel secreto subterráneo están escondidos en alguna parte del centro, capaz de proporcionar una ruta de escape segura."
+        },
+        {
+            "name": "Bazar Negro",
+            "description": "En las sombras de Tarkov, el bazar florece con comercio ilícito. Armas, municiones y raros artefactos se pueden obtener, para quien conozca el precio.",
+            "cell": "+56912345603",
+            "picture": "/images/bazar_negro.jpg",
+            "location": "47.114, 28.127",
+            "link_web": "https://tarkovbazar.com",
+            "curiosity": "Existe una moneda única, conocida solo por los habituales del bazar, que puede duplicar el valor de cualquier transacción si se usa sabiamente."
+        },
+        {
+            "name": "La Guarida del Contrabandista",
+            "description": "Escondido tras una fachada de ruinas, esta guarida alberga contrabandistas y sus tesoros. Solo los más astutos encontrarán la entrada secreta.",
+            "cell": "+56912345604",
+            "picture": "/images/guarida_contrabandista.jpg",
+            "location": "47.115, 28.128",
+            "link_web": "https://tarkovguarida.com",
+            "curiosity": "La leyenda cuenta de un contrabandista que desapareció, dejando tras de sí un cofre indestructible lleno de riquezas inimaginables."
+        },
+        {
+            "name": "El Paso Fronterizo",
+            "description": "Un cruce lleno de peligros y oportunidades. Mercenarios y fugitivos lo usan para escapar o entrar a Tarkov, siempre vigilando de las patrullas.",
+            "cell": "+56912345605",
+            "picture": "/images/paso_fronterizo.jpg",
+            "location": "47.116, 28.129",
+            "link_web": "https://tarkovpaso.com",
+            "curiosity": "Se dice que el espíritu de un guardia fronterizo aún ronda el área, ayudando a los viajeros perdidos a encontrar su camino."
+        },
+        {
+            "name": "Ruinas del Hospital",
+            "description": "Lo que una vez fue un centro de sanación ahora es un laberinto de desesperación. Aún se pueden encontrar suministros médicos entre los escombros.",
+            "cell": "+56912345606",
+            "picture": "/images/ruinas_hospital.jpg",
+            "location": "47.117, 28.130",
+            "link_web": "https://tarkovhospital.com",
+            "curiosity": "Rumores sugieren que un sótano oculto bajo las ruinas alberga un laboratorio donde se experimentó con sustancias peligrosas."
+        },
+        {
+            "name": "El Escondite del Cazador",
+            "description": "Oculto en el bosque, este refugio pertenece a un cazador solitario que conoce los secretos del terreno. Cuenta historias de sus cacerías a quienes le pagan con munición.",
+            "cell": "+56912345607",
+            "picture": "/images/escondite_cazador.jpg",
+            "location": "47.118, 28.131",
+            "link_web": "https://tarkovcazador.com",
+            "curiosity": "Algunos afirman haber visto animales en el bosque que parecen demasiado inteligentes, posiblemente mutaciones escapadas de Tarkov."
+        },
+        {
+            "name": "Depósito Ferroviario",
+            "description": "Este depósito sirve como un punto de intercambio crucial para bienes dentro de Tarkov. Los trenes abandonados esconden tanto peligros como tesoros.",
+            "cell": "+56912345608",
+            "picture": "/images/deposito_ferroviario.jpg",
+            "location": "47.119, 28.132",
+            "link_web": "https://tarkovferroviario.com",
+            "curiosity": "Un vagón específico, siempre custodiado por un fantasma, contiene un tesoro que nunca ha sido saqueado."
+        },
+        {
+            "name": "La Cueva del Ermitaño",
+            "description": "Profundamente en el bosque, una cueva oculta al ermitaño que conoce los secretos más oscuros de Tarkov. Se dice que ofrece consejos a cambio de objetos raros.",
+            "cell": "+56912345609",
+            "picture": "/images/cueva_ermitano.jpg",
+            "location": "47.120, 28.133",
+            "link_web": "https://tarkovermitano.com",
+            "curiosity": "Cuentan que el ermitaño fue una vez un científico de alto rango de Tarkov, ahora convertido en guardián de sus secretos más sombríos."
+        },
+        {
+            "name": "La Torre de Vigilancia",
+            "description": "Erigida sobre una colina, la torre ofrece una vista panorámica de Tarkov, siendo un punto estratégico para exploradores y francotiradores.",
+            "cell": "+56912345610",
+            "picture": "/images/torre_vigilancia.jpg",
+            "location": "47.121, 28.134",
+            "link_web": "https://tarkovtorre.com",
+            "curiosity": "Se rumorea que en noches claras, desde la cima de la torre, se pueden ver señales de luz misteriosas que algunos creen son comunicaciones extraterrestres."
+        }
+    ]
+}
