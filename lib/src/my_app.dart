@@ -1,4 +1,4 @@
-import 'package:bcf_proyecto_21/src/test_home.dart';
+import 'package:bcf_proyecto_21/src/my_home.dart';
 import 'package:flutter/material.dart';
 
 
@@ -9,12 +9,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Viajes',
       theme: ThemeData(                
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
         useMaterial3: true,
+        fontFamily: 'Manrope'
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Flutter app de viajes'),
     );
   }
 }
@@ -35,6 +36,6 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     // Carga de widget Scaffold
-    return const TestHome();
+    return const MyHome();
   }
 }
