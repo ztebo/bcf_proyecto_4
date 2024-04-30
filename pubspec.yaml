@@ -65,6 +65,14 @@ flutter:
     - assets/images/background2.png
     - assets/images/centro_comando.jpg
     - assets/images/refugio_secreto.jpg
+    - assets/images/bazar_negro.jpg
+    - assets/images/guarida_contrabandista.jpg
+    - assets/images/paso_fronterizo.jpg
+    - assets/images/ruinas_hospital.jpg
+    - assets/images/escondite_cazador.jpg
+    - assets/images/deposito_ferroviario.jpg
+    - assets/images/cueva_ermitano.jpg
+    - assets/images/torre_vigilancia.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

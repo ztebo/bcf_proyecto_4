@@ -3,9 +3,6 @@ import 'package:bcf_proyecto_21/src/widget_detail.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
-
-
 
 class MyHome extends StatefulWidget {
   const MyHome({ super.key });
@@ -72,9 +69,6 @@ class MyHomeState extends State<MyHome> {
     );      
   }
 
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,47 +81,64 @@ class MyHomeState extends State<MyHome> {
         // the App.build method, and use it to set our appbar title.
         title: const Text('Prueba de carga'),
       ),*/
+      extendBodyBehindAppBar: true,
+      extendBody: true,
+      appBar: AppBar(
+        
+        //shadowColor: Colors.black,        
+        backgroundColor: Colors.transparent ,
+        centerTitle: true,
+        title: const Text(
+          'Lugares recomendados en Tarkov',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Color.fromARGB(255, 36, 36, 36),
+            fontWeight: FontWeight.w600,
+            fontSize: 18
+          ),
+        ),
+      ),
       body: 
-          SafeArea(
-            child: Container(
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/images/background1.png'),
-                  fit: BoxFit.fill
-                )
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: _items.isNotEmpty?ListView.builder(
-                  padding: const EdgeInsets.all(3),
-                  itemCount: _items.length,
-                  itemBuilder: (context, index) {
-                    return Card(
-                      key: ValueKey(_items[index]['name']),
-                      margin: const EdgeInsets.all(5),
-                      child: ListTile(
-                        style: ListTileStyle.list,
-                        leading: const CircleAvatar(
-                          backgroundImage: AssetImage('assets/images/refugio_secreto.jpg'),
-                        ),
-                        title: Text(_items[index]['name']),
-                        subtitle: Text(_items[index]['description']),
-                        contentPadding: const EdgeInsets.all(10),
-                        //trailing: Icon(Icons.turn_right),
-                        onTap: () => seeDetails(index),
-                        dense: true,
-                        visualDensity: VisualDensity.compact,
-                        //trailing:Text(_items[index]['curiosity']),
-                
-                      ),
-                    );
-                  }
-                ):
-                const Text('El archivo JSON aún no ha sido cargado', textAlign: TextAlign.center,),
-              ),
+          Container(
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/images/background1.png'),
+                fit: BoxFit.fill
+              )
             ),
-          )
-            
+            child: Padding(
+              padding: const EdgeInsets.only(left: 20, right: 20, top: 80),
+              child: _items.isNotEmpty?ListView.builder(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                itemCount: _items.length,
+                itemBuilder: (context, index) {
+                  return Card(
+                    key: ValueKey(_items[index]['name']),
+                    margin: const EdgeInsets.symmetric(vertical: 7),
+                    child: ListTile(
+                      style: ListTileStyle.list,
+                      leading: Hero(
+                        tag: 'myTag',
+                        child: CircleAvatar(
+                          backgroundImage: AssetImage(_items[index]['picture']),
+                        ),
+                      ),
+                      title: Text(_items[index]['name'], style: const TextStyle(fontWeight: FontWeight.w600),),
+                      subtitle: Text(_items[index]['description']),
+                      contentPadding: const EdgeInsets.all(10),
+                      //trailing: Icon(Icons.turn_right),
+                      onTap: () => seeDetails(index),
+                      dense: true,
+                      visualDensity: VisualDensity.compact,
+                      //trailing:Text(_items[index]['curiosity']),
+                                
+                    ),
+                  );
+                }
+              ):
+              const Text('El archivo JSON aún no ha sido cargado', textAlign: TextAlign.center,),
+            ),
+          )            
       ,       
     );
   }

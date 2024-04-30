@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+/*
+Este widget tiene la misión de desplegar los detalles del lugar que se seleccionó
+en la pantalla de ListView.
+*/
+
 class WidgetDetail extends StatefulWidget {
   const WidgetDetail({
     Key? key,
@@ -18,8 +23,7 @@ class WidgetDetail extends StatefulWidget {
   final String picture;
   final String location;
   final String link;
-  final String curiosity;
-  
+  final String curiosity;  
 
   @override
   _WidgetDetail createState() => _WidgetDetail();
@@ -28,17 +32,17 @@ class WidgetDetail extends StatefulWidget {
 class _WidgetDetail extends State<WidgetDetail> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(      
       
-      
-      body: SafeArea(
-        child: Container(
-          decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/images/background2.png'),
-                fit: BoxFit.fill
-              )
-          ),
+      body: Container(
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/background2.png'),
+              fit: BoxFit.fill
+            )
+        ),
+        child: Hero(
+          tag: 'myTag',
           child: Column(
             children: [
               Container(
@@ -53,38 +57,54 @@ class _WidgetDetail extends State<WidgetDetail> {
               ),
               const SizedBox(height: 10,),
               Text(
+                textAlign: TextAlign.center,
                 widget.name,
                 style: const TextStyle(
-                  fontSize: 30
+                  fontSize: 25
                 ),
               ),
               const SizedBox(height: 10,),
-              Row(              
+              const Row(              
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Icon(Icons.call),
-                  Icon(Icons.location_on),
-                  Icon(Icons.link_sharp)
+                children: [                  
+                  Column(
+                    children: [
+                      Icon(Icons.call),
+                      Text('Llamar', style: TextStyle(fontSize: 12),),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Icon(Icons.location_on),
+                      Text('Ubicación', style: TextStyle(fontSize: 12),),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Icon(Icons.link_sharp),
+                      Text('Web',style: TextStyle(fontSize: 12)),
+                    ],
+                  ),
                 ],
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   widget.description,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 12
                   ),
                   ),
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
-                  '" ' + widget.curiosity + ' "',
+                  '"  ${widget.curiosity}  "',
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontStyle: FontStyle.italic
                   ),
                 ),
@@ -95,7 +115,7 @@ class _WidgetDetail extends State<WidgetDetail> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.of(context).pop(),
-        child: Icon(Icons.arrow_back_sharp),
+        child: const Icon(Icons.arrow_back_sharp),
       ),
       
       
