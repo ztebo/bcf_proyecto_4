@@ -41,11 +41,11 @@ class _WidgetDetail extends State<WidgetDetail> {
               fit: BoxFit.fill
             )
         ),
-        child: Hero(
-          tag: 'myTag',
-          child: Column(
-            children: [
-              Container(
+        child: Column(
+          children: [
+            Hero(
+              tag: widget.name,
+              child: Container(
                 height: 300, // Specify a height
                 width: double.infinity, // Specify a width
                 decoration: BoxDecoration(
@@ -55,62 +55,62 @@ class _WidgetDetail extends State<WidgetDetail> {
                   ),
                 ),
               ),
-              const SizedBox(height: 10,),
-              Text(
+            ),
+            const SizedBox(height: 10,),
+            Text(
+              textAlign: TextAlign.center,
+              widget.name,
+              style: const TextStyle(
+                fontSize: 25
+              ),
+            ),
+            const SizedBox(height: 10,),
+            const Row(              
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [                  
+                Column(
+                  children: [
+                    Icon(Icons.call),
+                    Text('Llamar', style: TextStyle(fontSize: 12),),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Icon(Icons.location_on),
+                    Text('Ubicación', style: TextStyle(fontSize: 12),),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Icon(Icons.link_sharp),
+                    Text('Web',style: TextStyle(fontSize: 12)),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                widget.description,
                 textAlign: TextAlign.center,
-                widget.name,
                 style: const TextStyle(
-                  fontSize: 25
+                  fontSize: 12
+                ),
+                ),
+            ),
+            const SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                '"  ${widget.curiosity}  "',
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontStyle: FontStyle.italic
                 ),
               ),
-              const SizedBox(height: 10,),
-              const Row(              
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [                  
-                  Column(
-                    children: [
-                      Icon(Icons.call),
-                      Text('Llamar', style: TextStyle(fontSize: 12),),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Icon(Icons.location_on),
-                      Text('Ubicación', style: TextStyle(fontSize: 12),),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Icon(Icons.link_sharp),
-                      Text('Web',style: TextStyle(fontSize: 12)),
-                    ],
-                  ),
-                ],
-              ),
-              const SizedBox(height: 10,),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  widget.description,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 12
-                  ),
-                  ),
-              ),
-              const SizedBox(height: 10,),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  '"  ${widget.curiosity}  "',
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontStyle: FontStyle.italic
-                  ),
-                ),
-              )
-            ],
-          ),
+            )
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(

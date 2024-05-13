@@ -102,7 +102,7 @@ class MyHomeState extends State<MyHome> {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/background1.png'),
+                image: AssetImage('assets/images/background2.png'),
                 fit: BoxFit.fill
               )
             ),
@@ -118,7 +118,7 @@ class MyHomeState extends State<MyHome> {
                     child: ListTile(
                       style: ListTileStyle.list,
                       leading: Hero(
-                        tag: 'myTag',
+                        tag: _items[index]['name'],
                         child: CircleAvatar(
                           backgroundImage: AssetImage(_items[index]['picture']),
                         ),
